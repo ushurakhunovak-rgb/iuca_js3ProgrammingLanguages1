@@ -50,13 +50,27 @@
 
     <div class="gmail_block">
         <div class="container">
-            <h3>Home work 1 (part 1.1)</h3>
+            <h3>Home work 1 (part 1.1) — Проверка ИИН (Казахстан, 12 цифр)</h3>
             <div class="inner_gmail_block">
                 <div class="form_gmail">
-                    <label for="gmail_input"></label>
-                    <input type="text" id="gmail_input" placeholder="ИИН">
-                    <button class="btn" id="gmail_button">Проверка ИИН</button>
-                    <span class="checker" id="gmail_result"></span>
+                    <label for="iin_input"></label>
+                    <input type="text" id="iin_input" placeholder="ИИН (пример: 010101600001)">
+                    <button class="btn" id="iin_button" onclick="checkIIN()">Проверка ИИН</button>
+                    <span class="checker" id="iin_result"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gmail_block">
+        <div class="container">
+            <h3>Home work 1 (part 1.2) — Проверка номера телефона РФ</h3>
+            <div class="inner_gmail_block">
+                <div class="form_gmail">
+                    <label for="phone_input"></label>
+                    <input type="text" id="phone_input" placeholder="Телефон (пример: +7(999)123-45-67)">
+                    <button class="btn" id="phone_button" onclick="checkPhone()">Проверка телефона</button>
+                    <span class="checker" id="phone_result"></span>
                 </div>
             </div>
         </div>
@@ -117,7 +131,28 @@
     </div>
 </div>
 
-</body>
+<script src="../js/validator.js"></script>  <!-- Подключение валидатора -->
 <script src="../js/home_works.js"></script>
 <script src="../js/modal.js"></script>
+
+<script>
+    // Функции для проверки (интеграция с формой)
+    function checkIIN() {
+        const iin = document.getElementById('iin_input').value.trim();
+        const result = validateIIN(iin);
+        const msg = result ? '✅ ИИН валиден!' : '❌ ИИН НЕ валиден!';
+        document.getElementById('iin_result').innerText = msg;
+        document.getElementById('iin_result').className = result ? 'checker valid' : 'checker invalid';  // Добавь CSS для .valid/.invalid если нужно (зелёный/красный)
+    }
+
+    function checkPhone() {
+        const phone = document.getElementById('phone_input').value.trim();
+        const result = validateRussianPhone(phone);
+        const msg = result ? '✅ Телефон валиден!' : '❌ Телефон НЕ валиден!';
+        document.getElementById('phone_result').innerText = msg;
+        document.getElementById('phone_result').className = result ? 'checker valid' : 'checker invalid';
+    }
+</script>
+
+</body>
 </html>
