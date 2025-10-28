@@ -47,7 +47,7 @@
         </div>
     </div>
 
-        <div class="phone_block">
+    <div class="phone_block">
         <div class="container">
             <h3>Phone checker Russian Numbers</h3>
             <div class="inner_phone_block">
@@ -60,50 +60,57 @@
         </div>
     </div>
 
+    <!-- TAB SLIDER с рабочим placeholder (dummyimage.com) -->
     <div class="tab_slider">
         <div class="container">
             <h3>tab slider</h3>
             <div class="inner_tab_slider">
                 <div class="tab_contents_block">
                     
-                    <div class="tab_content_block">
-                        <h4>Делегирование событий</h4>
-                        <p>В JavaScript делегирование событий - это когда мы используем один обработчик событий для
-                            группы элементов, вместо того чтобы назначать отдельный обработчик каждому элементу. Когда
-                            происходит событие на одном из элементов, оно перехватывается общим обработчиком, который
-                            определяет, какой элемент вызвал событие, и выполняет соответствующие действия.</p>
+                    <!-- 5 блоков контента: placeholder фото + короткое описание -->
+                    <div class="tab_content_block active_content">
+                        <div class="slide_card">
+                            <img src="https://dummyimage.com/400x250/007bff/ffffff&text=Event+Delegation" alt="Делегирование событий" class="slide-image">
+                            <h4>Делегирование событий</h4>
+                            <p>Общий обработчик для группы элементов: событие "всплывает" к родителю для динамических списков.</p>
+                        </div>
                     </div>
                     <div class="tab_content_block">
-                        <h4>classList</h4>
-                        <p>classList в JavaScript - это свойство, которое позволяет нам работать с классами элемента
-                            HTML. С помощью classList мы можем добавлять, удалять или проверять наличие классов у
-                            элемента. Допустим, у нас есть элемент на веб-странице, и мы хотим изменить его классы с
-                            помощью JavaScript. Вместо того, чтобы обращаться напрямую к атрибуту class, мы можем
-                            использовать свойство classList этого элемента. </p>
+                        <div class="slide_card">
+                            <img src="https://dummyimage.com/400x250/28a745/ffffff&text=ClassList" alt="ClassList" class="slide-image">
+                            <h4>classList</h4>
+                            <p>Свойство для работы с CSS-классами: add/remove/toggle для стилей без манипуляций строками.</p>
+                        </div>
                     </div>
                     <div class="tab_content_block">
-                        <h4>add()</h4>
-                        <p>Метод add позволяет добавить новый класс к списку классов элемента. Например,
-                            element.classList.add('new-class') добавит класс с именем "new-class" к элементу.</p>
+                        <div class="slide_card">
+                            <img src="https://dummyimage.com/400x250/dc3545/ffffff&text=Add+Class" alt="add()" class="slide-image">
+                            <h4>add()</h4>
+                            <p>Метод classList.add('class') — добавляет класс к элементу, если его нет.</p>
+                        </div>
                     </div>
                     <div class="tab_content_block">
-                        <h4>remove()</h4>
-                        <p>Метод remove позволяет удалить класс из списка классов элемента. Например,
-                            element.classList.remove('old-class') удалит класс с именем "old-class" из элемента.</p>
+                        <div class="slide_card">
+                            <img src="https://dummyimage.com/400x250/fd7e14/ffffff&text=Remove+Class" alt="remove()" class="slide-image">
+                            <h4>remove()</h4>
+                            <p>Метод classList.remove('class') — удаляет класс из элемента.</p>
+                        </div>
                     </div>
                     <div class="tab_content_block">
-                        <h4>contains()</h4>
-                        <p>Метод contains позволяет проверить, содержит ли элемент определенный класс. Он возвращает
-                            true, если класс присутствует, и false, если его нет. Например,
-                            element.classList.contains('highlight') вернет true, если у элемента есть класс
-                            "highlight".</p>
+                        <div class="slide_card">
+                            <img src="https://dummyimage.com/400x250/6f42c1/ffffff&text=Contains+Class" alt="contains()" class="slide-image">
+                            <h4>contains()</h4>
+                            <p>Метод classList.contains('class') — проверяет наличие класса (true/false).</p>
+                        </div>
                     </div>
+                    
+                    <!-- Tabs (кнопки для кликов) -->
                     <div class="tab_content_items">
-                        <div class="tab_content_item tab_content_item_active">Делегирование событий</div>
-                        <div class="tab_content_item">Class List</div>
-                        <div class="tab_content_item">add()</div>
-                        <div class="tab_content_item">remove()</div>
-                        <div class="tab_content_item">contains()</div>
+                        <div class="tab_content_item tab_content_item_active" data-tab="0">Делегирование событий</div>
+                        <div class="tab_content_item" data-tab="1">Class List</div>
+                        <div class="tab_content_item" data-tab="2">add()</div>
+                        <div class="tab_content_item" data-tab="3">remove()</div>
+                        <div class="tab_content_item" data-tab="4">contains()</div>
                     </div>
                 </div>
             </div>
